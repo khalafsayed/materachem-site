@@ -3,343 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matera Chemicals | Specialty Chemical Additives — KSA</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <title>Matera Chemicals | Specialty Chemical Additives — KSA Market Leader</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --navy: #0F2347;
             --navy-mid: #1B3A6B;
             --sky: #3B9BD1;
-            --sky-light: #EBF5FB;
-            --gray: #F4F5F7;
-            --text: #1A1A2E;
             --white: #FFFFFF;
-            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            --gray-light: #F8F9FA;
+            --transition: all 0.4s ease;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        body { font-family: 'Barlow', sans-serif; background: var(--white); color: #333; line-height: 1.6; }
         body.ar { font-family: 'IBM Plex Sans Arabic', sans-serif; direction: rtl; }
 
         /* Navbar */
-        #navbar {
-            position: fixed; top: 0; width: 100%; z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: 15px 0; transition: var(--transition);
-        }
-        #navbar.scrolled { padding: 10px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 25px; }
-        .logo img { height: 45px; transition: var(--transition); }
-        .nav-links { display: flex; gap: 35px; list-style: none; }
-        .nav-links a { font-weight: 600; font-size: 14px; color: var(--navy); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-        .nav-links a:hover { color: var(--sky); }
-        
-        .btn-lang { background: var(--gray); border: none; padding: 8px 15px; border-radius: 5px; font-weight: 700; cursor: pointer; font-size: 12px; }
-        .btn-cta { background: var(--sky); color: white; padding: 12px 25px; border-radius: 5px; font-weight: 700; text-decoration: none; font-size: 13px; transition: var(--transition); box-shadow: 0 4px 15px rgba(59, 155, 209, 0.3); }
-        .btn-cta:hover { background: var(--navy); transform: translateY(-2px); }
+        nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.98); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .logo img { height: 50px; }
 
-        /* Hero Section */
-        .hero {
-            height: 90vh; display: flex; align-items: center; position: relative;
-            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
-            color: white; padding-top: 80px; overflow: hidden;
-        }
-        .hero::before {
-            content: ''; position: absolute; width: 100%; height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/carbon-fibre.png'); opacity: 0.1;
-        }
-        .hero-content { max-width: 1200px; margin: 0 auto; padding: 0 25px; position: relative; z-index: 2; width: 100%; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 50px; }
-        .hero h1 { font-size: clamp(40px, 6vw, 75px); line-height: 1.1; font-weight: 800; margin-bottom: 25px; }
+        /* Hero */
+        .hero { height: 80vh; background: linear-gradient(rgba(15,35,71,0.9), rgba(15,35,71,0.9)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding: 0 20px; }
+        .hero h1 { font-size: clamp(32px, 5vw, 60px); font-weight: 800; margin-bottom: 20px; }
         .hero h1 span { color: var(--sky); }
-        .hero p { font-size: 18px; opacity: 0.8; margin-bottom: 40px; max-width: 550px; }
 
-        .hero-card {
-            background: white; padding: 40px; border-radius: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            text-align: center; color: var(--navy); transform: rotate(2deg); transition: var(--transition);
-        }
-        .hero-card:hover { transform: rotate(0deg) scale(1.05); }
-        .hero-card img { width: 100%; max-width: 250px; }
+        /* Market Insights Section */
+        .market-stats { padding: 60px 5%; background: var(--gray-light); text-align: center; }
+        .market-stats h2 { color: var(--navy); margin-bottom: 10px; font-weight: 700; }
+        .market-stats p.subtitle { color: #666; margin-bottom: 40px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .stat-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--sky); }
+        .stat-card h3 { font-size: 32px; color: var(--navy); margin-bottom: 5px; }
+        .stat-card p { font-size: 12px; color: #888; font-weight: 700; }
 
         /* Industries Section */
-        .section-padding { padding: 100px 0; }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 60px; }
-        .section-header h2 { font-size: 42px; color: var(--navy); margin-bottom: 20px; font-weight: 800; }
-        .section-header .line { width: 80px; height: 5px; background: var(--sky); margin: 0 auto; }
+        .section-padding { padding: 80px 5%; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); transition: var(--transition); }
+        .card:hover { transform: translateY(-10px); }
+        .card-img { height: 200px; overflow: hidden; position: relative; }
+        .card-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .card:hover .card-img img { scale: 1.1; }
+        .card-content { padding: 30px; }
+        .card-content h3 { color: var(--navy); margin-bottom: 15px; font-size: 22px; }
+        .card-content ul { list-style: none; }
+        .card-content ul li { margin-bottom: 8px; font-size: 14px; display: flex; align-items: center; gap: 10px; }
+        .card-content ul li i { color: var(--sky); font-size: 12px; }
 
-        .industry-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; padding: 0 25px; }
-        .industry-card {
-            background: var(--white); border: 1px solid #eee; border-radius: 15px; padding: 40px;
-            transition: var(--transition); position: relative; overflow: hidden;
-        }
-        .industry-card:hover { border-color: var(--sky); box-shadow: 0 20px 40px rgba(0,0,0,0.05); transform: translateY(-10px); }
-        .industry-card i { font-size: 40px; color: var(--sky); margin-bottom: 25px; }
-        .industry-card h3 { font-size: 24px; color: var(--navy); margin-bottom: 15px; }
-        .industry-card ul { list-style: none; }
-        .industry-card ul li { margin-bottom: 10px; font-size: 15px; color: #666; display: flex; align-items: center; gap: 10px; }
-        .industry-card ul li::before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--sky); font-size: 12px; }
+        /* Contact Box */
+        .contact-cta { background: var(--navy); color: white; padding: 60px 5%; text-align: center; margin: 50px 5%; border-radius: 20px; }
+        .btn-whatsapp { background: #25D366; color: white; padding: 18px 35px; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 25px; font-weight: 700; transition: 0.3s; }
+        .btn-whatsapp:hover { background: #128C7E; transform: scale(1.05); }
 
-        .market-badge { background: var(--navy); color: white; padding: 5px 12px; border-radius: 50px; font-size: 11px; font-weight: 700; margin-bottom: 15px; display: inline-block; }
+        /* Footer */
+        footer { background: #0a1120; color: white; padding: 80px 5% 40px; text-align: center; }
+        .footer-logo img { height: 80px; background: white; padding: 10px; border-radius: 10px; margin-bottom: 30px; }
+        .footer-links { display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; list-style: none; }
+        .footer-links a { color: #aaa; text-decoration: none; transition: 0.3s; }
+        .footer-links a:hover { color: var(--sky); }
 
-        /* Stats Section */
-        .stats-bar { background: var(--gray); padding: 60px 0; }
-        .stats-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); text-align: center; gap: 20px; }
-        .stat-item h4 { font-size: 40px; color: var(--sky); font-weight: 800; }
-        .stat-item p { text-transform: uppercase; font-size: 12px; font-weight: 700; color: #888; letter-spacing: 1px; }
-
-        /* Contact Section */
-        .contact-section { background: var(--white); }
-        .contact-container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 0 25px; align-items: center; }
-        .contact-form { background: var(--gray); padding: 50px; border-radius: 20px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; margin-bottom: 8px; font-weight: 700; font-size: 13px; color: var(--navy); text-transform: uppercase; }
-        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; }
-
-        footer { background: var(--navy); color: white; padding: 80px 0 30px; }
-        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 50px; padding: 0 25px; }
-        .footer-bottom { text-align: center; margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 14px; opacity: 0.6; }
-
-        /* Animations */
-        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        @media (max-width: 900px) {
-            .hero-content, .industry-grid, .contact-container, .footer-grid, .stats-grid { grid-template-columns: 1fr; }
-            .hero { height: auto; padding: 150px 0 100px; text-align: center; }
-            .hero-content { justify-items: center; }
-            .nav-links { display: none; }
-        }
+        @media (max-width: 768px) { .stats-grid { grid-template-columns: 1fr 1fr; } }
     </style>
 </head>
-<body id="body-tag">
+<body id="body">
 
-<nav id="navbar">
-    <div class="nav-container">
-        <a href="#" class="logo"><img src="LOGO.jpg" alt="Matera Chemicals"></a>
-        <ul class="nav-links">
-            <li><a href="#about" data-en="Our Story" data-ar="قصتنا">Our Story</a></li>
-            <li><a href="#solutions" data-en="Solutions" data-ar="الحلول">Solutions</a></li>
-            <li><a href="#market" data-en="Market" data-ar="السوق">Market</a></li>
-            <li><a href="#contact" data-en="Contact" data-ar="اتصل بنا">Contact</a></li>
-        </ul>
-        <div style="display: flex; gap: 15px; align-items: center;">
-            <button class="btn-lang" onclick="toggleLanguage()" id="lang-btn">AR</button>
-            <a href="#contact" class="btn-cta" data-en="Inquiry" data-ar="طلب عرض">Get Inquiry</a>
-        </div>
+<nav>
+    <div class="logo"><img src="LOGO.jpg" alt="Matera Chemicals"></div>
+    <div style="display: flex; gap: 20px; align-items: center;">
+        <button onclick="toggleLang()" style="border:none; background:none; cursor:pointer; font-weight:700;" id="langBtn">AR</button>
+        <a href="#contact" style="background:var(--sky); color:white; padding:10px 20px; border-radius:5px; text-decoration:none; font-size:14px; font-weight:700;">INQUIRY</a>
     </div>
 </nav>
 
 <section class="hero">
-    <div class="hero-content">
-        <div class="reveal active">
-            <h1 id="hero-title">Specializing in <span>Chemical Additives</span> for Saudi Industry</h1>
-            <p id="hero-desc">Connecting global innovation with local manufacturing. We provide specialty additives for over 10 industrial sectors across the Kingdom.</p>
-            <div style="display: flex; gap: 20px;">
-                <a href="#solutions" class="btn-cta" style="padding: 18px 40px; font-size: 16px;">Explore Solutions</a>
-                <a href="https://wa.me/9665XXXXXXXX" class="btn-cta" style="background: transparent; border: 2px solid var(--sky);">WhatsApp Support</a>
-            </div>
-        </div>
-        <div class="hero-visual reveal active">
-            <div class="hero-card">
-                <img src="LOGO.jpg" alt="Matera Logo">
-                <h4 style="margin-top:20px; letter-spacing: 2px; font-weight: 800;">KSA VISION 2030</h4>
-                <p style="font-size: 12px; margin-top: 10px; color: #666;">Empowering Local Manufacturing Content</p>
-            </div>
-        </div>
+    <div>
+        <h1 id="h-title">Advanced <span>Chemical Solutions</span><br>for the Saudi Industry</h1>
+        <p id="h-sub">Directly importing specialty additives for KSA's fastest growing sectors.</p>
     </div>
 </section>
 
-<section class="stats-bar">
+<section class="market-stats">
+    <h2 id="m-title">Saudi Arabia Market Insight</h2>
+    <p class="subtitle" id="m-sub">Strategic Growth Data & Industrial Opportunities</p>
     <div class="stats-grid">
-        <div class="stat-item"><h4>10+</h4><p>Target Sectors</p></div>
-        <div class="stat-item"><h4>70%</h4><p>Import Share</p></div>
-        <div class="stat-item"><h4>15B$</h4><p>Market Size</p></div>
-        <div class="stat-item"><h4>24h</h4><p>Response Time</p></div>
-    </div>
-</section>
-
-<section id="solutions" class="section-padding">
-    <div class="section-header reveal">
-        <span class="market-badge">SOLUTIONS PER SECTOR</span>
-        <h2>High Performance Additives</h2>
-        <div class="line"></div>
-    </div>
-
-    <div class="industry-grid">
-        <div class="industry-card reveal">
-            <div class="market-badge">Market: +3,500M SAR</div>
-            <i class="fas fa-utensils"></i>
-            <h3>Food & Beverages</h3>
-            <ul>
-                <li>Xanthan Gum & CMC</li>
-                <li>Preservatives & Emulsifiers</li>
-                <li>Halal & SFDA Certified</li>
-            </ul>
+        <div class="stat-card">
+            <h3>+3.5B</h3>
+            <p>FOOD & BEV MARKET (SAR)</p>
         </div>
-
-        <div class="industry-card reveal">
-            <div class="market-badge">Market: +1,800M SAR</div>
-            <i class="fas fa-droplet"></i>
-            <h3>Water Treatment</h3>
-            <ul>
-                <li>Coagulants & Antiscalants</li>
-                <li>Desalination Plant Solutions</li>
-                <li>Cooling Tower Chemicals</li>
-            </ul>
+        <div class="stat-card">
+            <h3>+1.2B</h3>
+            <p>PAINTS & COATINGS (SAR)</p>
         </div>
-
-        <div class="industry-card reveal">
-            <div class="market-badge">Market: +800M SAR</div>
-            <i class="fas fa-building-columns"></i>
-            <h3>Ceramics & Construction</h3>
-            <ul>
-                <li>Concrete Admixtures (PCE)</li>
-                <li>Waterproofing Chemicals</li>
-                <li>Ceramic Plasticity Enhancers</li>
-            </ul>
+        <div class="stat-card">
+            <h3>15B$</h3>
+            <p>TOTAL CHEMICALS MARKET SIZE</p>
         </div>
-
-        <div class="industry-card reveal">
-            <div class="market-badge">Market: +1,200M SAR</div>
-            <i class="fas fa-paint-roller"></i>
-            <h3>Paints & Coatings</h3>
-            <ul>
-                <li>Dispersants & Defoamers</li>
-                <li>TiO2 Rutile Grades</li>
-                <li>HPMC Thickening Agents</li>
-            </ul>
-        </div>
-
-        <div class="industry-card reveal">
-            <div class="market-badge">Market: +900M SAR</div>
-            <i class="fas fa-box-open"></i>
-            <h3>Plastics & Rubber</h3>
-            <ul>
-                <li>UV Stabilizers</li>
-                <li>Antioxidants (Irganox)</li>
-                <li>Flame Retardants (ATH)</li>
-            </ul>
-        </div>
-
-        <div class="industry-card reveal">
-            <div class="market-badge">Market: +1,100M SAR</div>
-            <i class="fas fa-sparkles"></i>
-            <h3>Cosmetics & Care</h3>
-            <ul>
-                <li>Carbomer & Gelling Agents</li>
-                <li>Emulsifying Waxes</li>
-                <li>Silky Texture Enhancers</li>
-            </ul>
+        <div class="stat-card">
+            <h3>12%</h3>
+            <p>ANNUAL SECTOR GROWTH</p>
         </div>
     </div>
 </section>
 
-<section id="contact" class="section-padding contact-section">
-    <div class="contact-container">
-        <div class="reveal">
-            <h2 style="font-size: 48px; color: var(--navy); line-height: 1.2;">Your Reliable Supply Chain Partner in <span style="color: var(--sky);">Saudi Arabia</span></h2>
-            <p style="margin: 30px 0; font-size: 18px; color: #666;">We provide technical support, documentation (COA, MSDS), and flexible quantities starting from 100kg to full containers.</p>
-            <div style="margin-top: 40px;">
-                <p><strong><i class="fas fa-check-circle" style="color: var(--sky);"></i> Direct Import</strong> - No middleman markups.</p>
-                <p><strong><i class="fas fa-check-circle" style="color: var(--sky);"></i> Quality Control</strong> - Certified world-class manufacturers.</p>
-                <p><strong><i class="fas fa-check-circle" style="color: var(--sky);"></i> Fast Delivery</strong> - Serving all regions across KSA.</p>
+<section class="section-padding">
+    <div style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-size: 36px; color: var(--navy);" id="s-title">Specialized Industry Solutions</h2>
+    </div>
+    <div class="grid">
+        <div class="card">
+            <div class="card-img"><img src="https://images.unsplash.com/photo-1534432182912-6386478789e4?auto=format&fit=crop&q=80" alt="Food Industry"></div>
+            <div class="card-content">
+                <h3>Food & Beverages</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Xanthan Gum & CMC</li>
+                    <li><i class="fas fa-check"></i> Potassium Sorbate</li>
+                    <li><i class="fas fa-check"></i> SFDA & Halal Certified</li>
+                </ul>
             </div>
         </div>
-        <div class="contact-form reveal">
-            <h3 style="margin-bottom: 30px; font-size: 24px;">Quick Quote Request</h3>
-            <div class="form-group">
-                <label>Company Name</label>
-                <input type="text" placeholder="Your Factory/Company">
+        <div class="card">
+            <div class="card-img"><img src="https://images.unsplash.com/photo-1548919973-5dea585f396a?auto=format&fit=crop&q=80" alt="Water Treatment"></div>
+            <div class="card-content">
+                <h3>Water Treatment</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> Antiscalants & Biocides</li>
+                    <li><i class="fas fa-check"></i> Desalination Solutions</li>
+                    <li><i class="fas fa-check"></i> High Efficiency Coagulants</li>
+                </ul>
             </div>
-            <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" placeholder="example@company.com">
+        </div>
+        <div class="card">
+            <div class="card-img"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80" alt="Construction"></div>
+            <div class="card-content">
+                <h3>Ceramics & Construction</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> PCE Superplasticizers</li>
+                    <li><i class="fas fa-check"></i> Waterproofing Admixtures</li>
+                    <li><i class="fas fa-check"></i> Ceramic Body Plasticizers</li>
+                </ul>
             </div>
-            <div class="form-group">
-                <label>Industrial Sector</label>
-                <select>
-                    <option>Food & Beverages</option>
-                    <option>Water Treatment</option>
-                    <option>Construction</option>
-                    <option>Detergents</option>
-                    <option>Other</option>
-                </select>
+        </div>
+        <div class="card">
+            <div class="card-img"><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&q=80" alt="Paints"></div>
+            <div class="card-content">
+                <h3>Paints & Coatings</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> TiO2 Rutile Grades</li>
+                    <li><i class="fas fa-check"></i> HPMC & Dispersants</li>
+                    <li><i class="fas fa-check"></i> Defoamers & Biocides</li>
+                </ul>
             </div>
-            <div class="form-group">
-                <label>Product & Quantity</label>
-                <textarea rows="4" placeholder="e.g. Xanthan Gum - 500kg"></textarea>
-            </div>
-            <button class="btn-cta" style="width: 100%; border: none; cursor: pointer;">Send Inquiry Now</button>
         </div>
     </div>
+</section>
+
+<section id="contact" class="contact-cta">
+    <h2 id="c-title">Ready to source high-quality additives?</h2>
+    <p id="c-sub">Get technical support and competitive quotes directly from our sales engineer.</p>
+    <a href="https://wa.me/966XXXXXXXXX" class="btn-whatsapp">
+        <i class="fab fa-whatsapp"></i> CONTACT SALES ENGINEER
+    </a>
 </section>
 
 <footer>
-    <div class="footer-grid">
-        <div>
-            <img src="LOGO.jpg" alt="Matera" style="height: 50px; background: white; padding: 10px; border-radius: 5px;">
-            <p style="margin-top: 20px; opacity: 0.7;">Materachem is a specialized distributor of high-performance chemical additives, dedicated to empowering Saudi manufacturing excellence in alignment with Vision 2030.</p>
-        </div>
-        <div>
-            <h4 style="margin-bottom: 25px; color: var(--sky);">Quick Links</h4>
-            <ul style="list-style: none; opacity: 0.7;">
-                <li style="margin-bottom: 10px;"><a href="#about" style="color:white; text-decoration:none;">Our Story</a></li>
-                <li style="margin-bottom: 10px;"><a href="#solutions" style="color:white; text-decoration:none;">Sectors We Serve</a></li>
-                <li style="margin-bottom: 10px;"><a href="#contact" style="color:white; text-decoration:none;">Global Manufacturers</a></li>
-            </ul>
-        </div>
-        <div>
-            <h4 style="margin-bottom: 25px; color: var(--sky);">Regional Hub</h4>
-            <p style="opacity: 0.7;"><i class="fas fa-location-dot"></i> Serving Kingdom of Saudi Arabia</p>
-            <p style="margin-top:10px; opacity: 0.7;"><i class="fas fa-globe"></i> materachem.com</p>
-            <p style="margin-top:10px; opacity: 0.7;"><i class="fas fa-clock"></i> 24h Response Commitment</p>
-        </div>
+    <div class="footer-logo">
+        <img src="LOGO.jpg" alt="Matera Chemicals Large">
     </div>
-    <div class="footer-bottom">
-        &copy; 2026 Matera Chemicals | Innovation In Every Element. All rights reserved.
-    </div>
+    <ul class="footer-links">
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">Market Insights</a></li>
+        <li><a href="#">Technical Support</a></li>
+    </ul>
+    <p style="opacity: 0.5; font-size: 13px;">&copy; 2026 Matera Chemicals | Kingdom of Saudi Arabia | Innovation In Every Element.</p>
 </footer>
 
 <script>
-    // التبديل بين اللغتين
     let currentLang = 'en';
-    function toggleLanguage() {
-        const body = document.getElementById('body-tag');
-        const btn = document.getElementById('lang-btn');
-        if (currentLang === 'en') {
-            body.classList.add('ar');
-            btn.innerText = 'EN';
-            currentLang = 'ar';
-            // تحديث المحتوى يدوياً لبعض العناصر الرئيسية
-            document.getElementById('hero-title').innerHTML = 'تخصص في <span>الإضافات الكيميائية</span> للصناعة السعودية';
-            document.getElementById('hero-desc').innerText = 'نربط الابتكار العالمي بالتصنيع المحلي. نوفر إضافات متخصصة لأكثر من 10 قطاعات صناعية في جميع أنحاء المملكة.';
+    function toggleLang() {
+        const body = document.getElementById('body');
+        const langBtn = document.getElementById('langBtn');
+        if(currentLang === 'en') {
+            body.classList.add('ar'); currentLang = 'ar'; langBtn.innerText = 'EN';
+            document.getElementById('h-title').innerHTML = '<span>حلول كيميائية</span> متطورة<br>للصناعة السعودية';
+            document.getElementById('m-title').innerText = 'رؤية حول السوق السعودي';
+            document.getElementById('m-sub').innerText = 'بيانات النمو الاستراتيجي والفرص الصناعية';
+            document.getElementById('s-title').innerText = 'حلول صناعية متخصصة';
+            document.getElementById('c-title').innerText = 'جاهز لتوريد مضافات عالية الجودة؟';
         } else {
-            body.classList.remove('ar');
-            btn.innerText = 'AR';
-            currentLang = 'en';
-            document.getElementById('hero-title').innerHTML = 'Specializing in <span>Chemical Additives</span> for Saudi Industry';
-            document.getElementById('hero-desc').innerText = 'Connecting global innovation with local manufacturing. We provide specialty additives for over 10 industrial sectors across the Kingdom.';
+            body.classList.remove('ar'); currentLang = 'en'; langBtn.innerText = 'AR';
+            document.getElementById('h-title').innerHTML = 'Advanced <span>Chemical Solutions</span><br>for the Saudi Industry';
+            document.getElementById('m-title').innerText = 'Saudi Arabia Market Insight';
+            document.getElementById('m-sub').innerText = 'Strategic Growth Data & Industrial Opportunities';
+            document.getElementById('s-title').innerText = 'Specialized Industry Solutions';
+            document.getElementById('c-title').innerText = 'Ready to source high-quality additives?';
         }
     }
-
-    // تأثير الظهور عند التمرير
-    window.addEventListener('scroll', () => {
-        const reveals = document.querySelectorAll('.reveal');
-        reveals.forEach(reveal => {
-            const windowHeight = window.innerHeight;
-            const revealTop = reveal.getBoundingClientRect().top;
-            if (revealTop < windowHeight - 100) {
-                reveal.classList.add('active');
-            }
-        });
-        
-        const nav = document.getElementById('navbar');
-        if (window.scrollY > 50) { nav.classList.add('scrolled'); }
-        else { nav.classList.remove('scrolled'); }
-    });
 </script>
+
 </body>
 </html>
