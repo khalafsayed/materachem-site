@@ -3,142 +3,754 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matera Chemicals | Specialty Chemical Additives — KSA</title>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- SEO -->
+    <title>Matera Chemicals | Specialty Chemical Additives — KSA | ماتيرا كيمكالز</title>
+    <meta name="description" content="Matera Chemicals — توريد مضافات كيميائية متخصصة في المملكة العربية السعودية. نخدم قطاعات الغذاء، معالجة المياه، الدهانات، البناء والمزيد. Specialty chemical additives supplier across Saudi Arabia.">
+    <meta name="keywords" content="chemical additives Saudi Arabia, specialty chemicals KSA, xanthan gum KSA, water treatment chemicals Saudi, TiO2 Saudi Arabia, food additives SFDA, HPMC Saudi, PAC Saudi, ماتيرا كيمكالز, مواد كيميائية المملكة, إضافات غذائية, معالجة المياه">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Matera Chemicals">
+    <link rel="canonical" href="https://www.materachem.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Matera Chemicals | Specialty Chemical Additives — KSA">
+    <meta property="og:description" content="Leading specialty chemical additives supplier serving 10+ industrial sectors across Saudi Arabia. SFDA-compliant, fast local delivery.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.materachem.com/">
+    <meta property="og:image" content="https://www.materachem.com/LOGO.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ar_SA">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Matera Chemicals",
+      "alternateName": "ماتيرا كيمكالز",
+      "url": "https://www.materachem.com",
+      "logo": "https://www.materachem.com/LOGO.jpg",
+      "description": "Specialty chemical additives supplier serving 10+ industrial sectors in Saudi Arabia",
+      "areaServed": { "@type": "Country", "name": "Saudi Arabia" },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "availableLanguage": ["Arabic", "English"]
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
-        :root { --navy: #0F2347; --sky: #3B9BD1; --white: #FFFFFF; --gray: #F8F9FA; --transition: all 0.4s ease; }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --navy: #0F2347;
+            --navy-light: #1a3460;
+            --sky: #3B9BD1;
+            --sky-dark: #2a7ab0;
+            --white: #FFFFFF;
+            --gray: #F8F9FA;
+            --text: #2d3748;
+            --text-light: #718096;
+            --border: #e2e8f0;
+            --shadow: 0 4px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
+            --transition: all 0.3s ease;
+            --radius: 12px;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
-        body { font-family: 'Barlow', sans-serif; background: var(--white); color: #333; line-height: 1.6; }
+        body { font-family: 'Barlow', sans-serif; background: var(--white); color: var(--text); line-height: 1.6; overflow-x: hidden; }
         body.ar { font-family: 'IBM Plex Sans Arabic', sans-serif; direction: rtl; }
-        nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(255,255,255,0.98); padding: 12px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
-        .logo img { height: 45px; }
-        .hero { height: 50vh; background: linear-gradient(rgba(15,35,71,0.85), rgba(15,35,71,0.85)), url('https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; text-align: center; color: white; padding-top: 60px; }
-        .hero h1 { font-size: clamp(26px, 4vw, 50px); font-weight: 800; }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(255,255,255,0.97); backdrop-filter: blur(10px);
+            padding: 13px 6%; display: flex; justify-content: space-between; align-items: center;
+            transition: var(--transition); border-bottom: 1px solid transparent;
+        }
+        nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.09); border-bottom-color: var(--border); }
+        .logo img { height: 42px; object-fit: contain; display: block; }
+        .nav-links { display: flex; gap: 26px; align-items: center; list-style: none; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 14px; transition: var(--transition); }
+        .nav-links a:hover { color: var(--sky); }
+        .nav-right { display: flex; gap: 10px; align-items: center; }
+        .btn-lang {
+            border: 1.5px solid var(--navy); background: none; cursor: pointer;
+            font-weight: 700; font-size: 12px; padding: 5px 12px; border-radius: 4px;
+            color: var(--navy); transition: var(--transition); font-family: inherit;
+        }
+        .btn-lang:hover { background: var(--navy); color: white; }
+        .btn-nav-cta {
+            background: var(--sky); color: white; padding: 9px 20px; border-radius: 6px;
+            text-decoration: none; font-size: 13px; font-weight: 700; transition: var(--transition);
+        }
+        .btn-nav-cta:hover { background: var(--sky-dark); transform: translateY(-1px); }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; border: none; background: none; padding: 4px; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--navy); border-radius: 2px; transition: var(--transition); }
+        .mobile-menu {
+            display: none; position: fixed; top: 70px; left: 0; right: 0; z-index: 999;
+            background: white; border-bottom: 1px solid var(--border);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1); padding: 20px 6%; flex-direction: column; gap: 16px;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 15px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+        body.ar .mobile-menu { text-align: right; }
+
+        /* ── HERO ── */
+        .hero {
+            position: relative; min-height: 100vh;
+            background: linear-gradient(135deg, rgba(15,35,71,0.93) 0%, rgba(15,35,71,0.76) 100%),
+                url('https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop') center/cover no-repeat;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: white; padding: 130px 6% 90px;
+        }
+        .hero-content { max-width: 780px; }
+        .hero-badge {
+            display: inline-block; background: rgba(59,155,209,0.2); border: 1px solid rgba(59,155,209,0.5);
+            color: #7ec8e3; padding: 6px 18px; border-radius: 50px;
+            font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 22px;
+        }
+        .hero h1 { font-size: clamp(28px, 5vw, 58px); font-weight: 800; line-height: 1.18; margin-bottom: 18px; }
         .hero h1 span { color: var(--sky); }
-        .market-stats { padding: 40px 5%; background: var(--gray); text-align: center; }
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 25px; }
-        .stat-card { background: white; padding: 20px; border-radius: 8px; border-bottom: 4px solid var(--sky); }
-        .stat-card h3 { font-size: 26px; color: var(--navy); }
-        .stat-card p { font-size: 10px; color: #888; font-weight: 700; text-transform: uppercase; }
-        .section-padding { padding: 60px 5%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.06); transition: var(--transition); border: 1px solid #eee; }
-        .card:hover { transform: translateY(-8px); border-color: var(--sky); }
-        .card-img { height: 180px; overflow: hidden; }
-        .card-img img { width: 100%; height: 100%; object-fit: cover; }
-        .card-content { padding: 20px; }
-        .card-content h3 { color: var(--navy); font-size: 18px; margin-bottom: 12px; border-left: 4px solid var(--sky); padding-left: 10px; }
-        body.ar .card-content h3 { border-left: none; border-right: 4px solid var(--sky); padding-left: 0; padding-right: 10px; }
-        .card-content ul { list-style: none; font-size: 13px; color: #555; }
-        .card-content ul li { margin-bottom: 5px; display: flex; align-items: center; gap: 8px; }
-        .card-content ul li i { color: var(--sky); font-size: 10px; }
-        .contact-cta { background: var(--navy); color: white; padding: 60px 5%; text-align: center; margin: 40px 5%; border-radius: 15px; }
-        .btn-whatsapp { background: #25D366; color: white; padding: 16px 32px; border-radius: 50px; text-decoration: none; display: inline-block; margin-top: 20px; font-weight: 700; }
-        footer { background: #0a1120; color: white; padding: 50px 5%; text-align: center; }
-        .footer-logo img { height: 85px; background: white; padding: 12px; border-radius: 10px; margin-bottom: 20px; }
+        .hero p { font-size: clamp(14px, 2vw, 17px); opacity: 0.82; margin-bottom: 34px; max-width: 560px; margin-left: auto; margin-right: auto; }
+        .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--sky); color: white; padding: 14px 30px;
+            border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px;
+            transition: var(--transition);
+        }
+        .btn-primary:hover { background: var(--sky-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(59,155,209,0.45); }
+        .btn-outline {
+            background: transparent; color: white; padding: 14px 30px;
+            border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px;
+            border: 2px solid rgba(255,255,255,0.65); transition: var(--transition);
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); border-color: white; }
+        .hero-scroll {
+            position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+            color: rgba(255,255,255,0.45); font-size: 18px; animation: bounce 2s infinite;
+        }
+        @keyframes bounce { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(8px)} }
+
+        /* ── STATS ── */
+        .stats-section { padding: 60px 6%; background: var(--navy); }
+        .stats-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+        .stats-inner h2 { color: white; font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+        .stats-inner > p { color: rgba(255,255,255,0.55); font-size: 13px; margin-bottom: 38px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); gap: 18px; }
+        .stat-card {
+            background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius); padding: 24px 16px; transition: var(--transition);
+        }
+        .stat-card:hover { background: rgba(59,155,209,0.15); border-color: rgba(59,155,209,0.35); transform: translateY(-4px); }
+        .stat-num { font-size: 30px; font-weight: 800; color: var(--sky); line-height: 1; margin-bottom: 8px; }
+        .stat-label { font-size: 10px; color: rgba(255,255,255,0.55); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* ── COMMON SECTION ── */
+        section { padding: 80px 6%; }
+        .section-tag { display: inline-block; color: var(--sky); font-weight: 700; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+        .section-title { font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; color: var(--navy); margin-bottom: 14px; line-height: 1.25; }
+        .section-sub { font-size: 15px; color: var(--text-light); line-height: 1.75; max-width: 540px; }
+        .text-center { text-align: center; }
+        .text-center .section-sub { margin: 0 auto; }
+        .inner { max-width: 1100px; margin: 0 auto; }
+
+        /* ── ABOUT ── */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-top: 50px; }
+        .about-img { border-radius: 16px; overflow: hidden; height: 420px; }
+        .about-img img { width: 100%; height: 100%; object-fit: cover; }
+        .about-features { margin-top: 28px; display: flex; flex-direction: column; gap: 20px; }
+        .about-feat { display: flex; gap: 14px; align-items: flex-start; }
+        .feat-icon {
+            width: 42px; height: 42px; background: rgba(59,155,209,0.1); border-radius: 10px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--sky); font-size: 16px; flex-shrink: 0;
+        }
+        .feat-text h4 { font-size: 14px; color: var(--navy); font-weight: 700; margin-bottom: 3px; }
+        .feat-text p { font-size: 13px; color: var(--text-light); }
+
+        /* ── WHY US ── */
+        .why-bg { background: var(--gray); }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; margin-top: 48px; }
+        .why-card {
+            background: white; border-radius: var(--radius); padding: 30px 24px;
+            box-shadow: var(--shadow); transition: var(--transition); border-top: 4px solid transparent;
+        }
+        .why-card:hover { border-top-color: var(--sky); transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+        .why-icon {
+            width: 54px; height: 54px; background: linear-gradient(135deg, rgba(59,155,209,0.15), rgba(59,155,209,0.04));
+            border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            font-size: 22px; color: var(--sky); margin-bottom: 18px;
+        }
+        .why-card h3 { font-size: 16px; color: var(--navy); font-weight: 700; margin-bottom: 10px; }
+        .why-card p { font-size: 13.5px; color: var(--text-light); line-height: 1.7; }
+
+        /* ── PRODUCTS ── */
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(285px, 1fr)); gap: 22px; margin-top: 48px; max-width: 1200px; margin-left: auto; margin-right: auto; }
+        .product-card {
+            background: white; border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--shadow); transition: var(--transition); border: 1px solid var(--border);
+        }
+        .product-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); border-color: var(--sky); }
+        .product-img { height: 175px; overflow: hidden; }
+        .product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .product-card:hover .product-img img { transform: scale(1.06); }
+        .product-body { padding: 20px; }
+        .product-body h3 {
+            color: var(--navy); font-size: 15px; font-weight: 700; margin-bottom: 12px;
+            padding-bottom: 10px; border-bottom: 2px solid var(--sky);
+            display: flex; align-items: center; gap: 8px;
+        }
+        .product-body ul { list-style: none; font-size: 13px; color: var(--text-light); }
+        .product-body ul li { margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
+        .product-body ul li i { color: var(--sky); font-size: 9px; margin-top: 4px; flex-shrink: 0; }
+
+        /* ── QUOTE FORM ── */
+        .form-section { background: var(--navy); }
+        .form-wrap { max-width: 700px; margin: 48px auto 0; background: white; border-radius: 16px; padding: 44px 42px; box-shadow: 0 24px 64px rgba(0,0,0,0.3); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+        .form-group { display: flex; flex-direction: column; gap: 5px; }
+        .form-group.full { grid-column: 1 / -1; }
+        .form-group label { font-size: 11px; font-weight: 700; color: var(--navy); text-transform: uppercase; letter-spacing: 0.6px; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 11px 14px; border: 1.5px solid var(--border);
+            border-radius: 8px; font-size: 14px; font-family: inherit;
+            transition: var(--transition); color: var(--text); background: var(--gray);
+        }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none; border-color: var(--sky); background: white;
+            box-shadow: 0 0 0 3px rgba(59,155,209,0.12);
+        }
+        .form-group textarea { height: 95px; resize: vertical; }
+        .btn-submit {
+            width: 100%; padding: 15px; background: var(--sky); color: white;
+            border: none; border-radius: 8px; font-size: 15px; font-weight: 700;
+            cursor: pointer; transition: var(--transition);
+            display: flex; align-items: center; justify-content: center; gap: 10px; font-family: inherit;
+        }
+        .btn-submit:hover { background: var(--sky-dark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(59,155,209,0.45); }
+        .form-note { font-size: 11px; color: var(--text-light); text-align: center; margin-top: 10px; }
+
+        /* ── FOOTER ── */
+        footer { background: #080f1f; color: white; padding: 52px 6% 28px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto; padding-bottom: 36px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+        .footer-brand img { height: 68px; background: white; padding: 10px 16px; border-radius: 8px; object-fit: contain; }
+        .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.48); margin-top: 14px; max-width: 260px; line-height: 1.7; }
+        .footer-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--sky); margin-bottom: 14px; }
+        .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .footer-col ul li a { text-decoration: none; color: rgba(255,255,255,0.5); font-size: 13px; transition: var(--transition); }
+        .footer-col ul li a:hover { color: var(--sky); }
+        .footer-bottom { max-width: 1100px; margin: 22px auto 0; display: flex; justify-content: space-between; align-items: center; }
+        .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.28); }
+
+        /* ── ANIMATIONS ── */
+        .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; gap: 32px; }
+            .about-img { height: 260px; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-wrap { padding: 28px 20px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+            .footer-brand p { max-width: 100%; }
+        }
+
+        /* ── RTL ── */
+        body.ar .about-feat { flex-direction: row-reverse; text-align: right; }
+        body.ar .feat-text { text-align: right; }
+        body.ar .product-body h3 { border-bottom: 2px solid var(--sky); }
+        body.ar .form-group label { text-align: right; }
+        body.ar .footer-brand p { max-width: 100%; }
     </style>
 </head>
 <body id="body">
 
-<nav>
-    <div class="logo"><img src="LOGO.jpg" alt="Matera Chemicals"></div>
-    <div style="display: flex; gap: 15px; align-items: center;">
-        <button onclick="toggleLang()" style="border:none; background:none; cursor:pointer; font-weight:700;" id="langBtn">AR</button>
-        <a href="#contact" style="background:var(--sky); color:white; padding:8px 16px; border-radius:4px; text-decoration:none; font-size:13px; font-weight:700;">INQUIRY</a>
+<!-- ── NAV ── -->
+<nav id="navbar">
+    <div class="logo">
+        <a href="#"><img src="LOGO.jpg" alt="Matera Chemicals"></a>
+    </div>
+    <ul class="nav-links" id="nav-links-desktop">
+        <li><a href="#about" data-en="About" data-ar="عن الشركة">About</a></li>
+        <li><a href="#products" data-en="Products" data-ar="منتجاتنا">Products</a></li>
+        <li><a href="#why-us" data-en="Why Us" data-ar="لماذا نحن">Why Us</a></li>
+        <li><a href="#contact" data-en="Contact" data-ar="تواصل">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+        <button class="btn-lang" onclick="toggleLang()" id="langBtn">AR</button>
+        <a href="#contact" class="btn-nav-cta" data-en="Request Quote" data-ar="طلب عرض سعر" id="nav-cta">Request Quote</a>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </div>
 </nav>
 
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu">
+    <a href="#about" onclick="closeMenu()" data-en="About" data-ar="عن الشركة">About</a>
+    <a href="#products" onclick="closeMenu()" data-en="Products" data-ar="منتجاتنا">Products</a>
+    <a href="#why-us" onclick="closeMenu()" data-en="Why Us" data-ar="لماذا نحن">Why Us</a>
+    <a href="#contact" onclick="closeMenu()" data-en="Request Quote" data-ar="طلب عرض سعر">Request Quote</a>
+</div>
+
+<!-- ── HERO ── -->
 <section class="hero">
-    <div><h1 id="h-title">Providing <span>Essential Additives</span><br>for 10+ Industrial Sectors</h1></div>
+    <div class="hero-content">
+        <div class="hero-badge" id="hero-badge">KSA Specialty Chemicals</div>
+        <h1 id="hero-title">Providing <span>Essential Additives</span><br>for 10+ Industrial Sectors</h1>
+        <p id="hero-sub">Your trusted partner for high-quality specialty chemical additives across the Kingdom of Saudi Arabia — from food & beverages to construction, plastics, and cosmetics.</p>
+        <div class="hero-btns">
+            <a href="#contact" class="btn-primary" id="hero-btn1">Request a Quote</a>
+            <a href="#products" class="btn-outline" id="hero-btn2">Explore Products</a>
+        </div>
+    </div>
+    <a href="#stats" class="hero-scroll" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
 </section>
 
-<section class="market-stats">
-    <h2 id="m-title">Saudi Arabia Market Insight</h2>
-    <div class="stats-grid">
-        <div class="stat-card"><h3>+3.5B</h3><p>Food & Bev (SAR)</p></div>
-        <div class="stat-card"><h3>+1.8B</h3><p>Water Treatment (SAR)</p></div>
-        <div class="stat-card"><h3>+1.2B</h3><p>Paints & Coatings (SAR)</p></div>
-        <div class="stat-card"><h3>15B$</h3><p>Total Chem Market</p></div>
+<!-- ── STATS ── -->
+<div class="stats-section" id="stats">
+    <div class="stats-inner">
+        <h2 id="stats-h">Saudi Arabia Chemical Market</h2>
+        <p id="stats-p">Serving the fastest-growing specialty chemicals market in the Middle East</p>
+        <div class="stats-grid">
+            <div class="stat-card fade-in">
+                <div class="stat-num" data-target="3.5" data-suffix="B+">0</div>
+                <div class="stat-label" id="st1">Food &amp; Bev (SAR)</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-num" data-target="1.8" data-suffix="B+">0</div>
+                <div class="stat-label" id="st2">Water Treatment (SAR)</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-num" data-target="1.2" data-suffix="B+">0</div>
+                <div class="stat-label" id="st3">Paints &amp; Coatings (SAR)</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-num" data-target="15" data-suffix="B$">0</div>
+                <div class="stat-label" id="st4">Total Chemical Market</div>
+            </div>
+            <div class="stat-card fade-in">
+                <div class="stat-num" data-target="10" data-suffix="+">0</div>
+                <div class="stat-label" id="st5">Industrial Sectors Served</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ── ABOUT ── -->
+<section id="about">
+    <div class="inner">
+        <div class="about-grid">
+            <div class="about-img fade-in">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&auto=format&fit=crop" alt="Chemical laboratory" loading="lazy">
+            </div>
+            <div class="fade-in">
+                <span class="section-tag" id="about-tag">About Matera Chemicals</span>
+                <h2 class="section-title" id="about-title">Your Reliable Source for Specialty Chemicals in KSA</h2>
+                <p class="section-sub" id="about-desc">Matera Chemicals is a specialized trading company based in the Kingdom of Saudi Arabia, focused on supplying high-quality chemical additives and raw materials to industrial manufacturers across multiple sectors.</p>
+                <div class="about-features">
+                    <div class="about-feat">
+                        <div class="feat-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="feat-text">
+                            <h4 id="af1t">SFDA &amp; Regulatory Compliant</h4>
+                            <p id="af1d">Food-grade products comply with Saudi Food and Drug Authority standards</p>
+                        </div>
+                    </div>
+                    <div class="about-feat">
+                        <div class="feat-icon"><i class="fas fa-shipping-fast"></i></div>
+                        <div class="feat-text">
+                            <h4 id="af2t">Fast Local Delivery</h4>
+                            <p id="af2d">Stocked inventory enables rapid fulfillment to factories across the Kingdom</p>
+                        </div>
+                    </div>
+                    <div class="about-feat">
+                        <div class="feat-icon"><i class="fas fa-flask"></i></div>
+                        <div class="feat-text">
+                            <h4 id="af3t">Technical Sales Support</h4>
+                            <p id="af3d">Sales engineers available to recommend the right grade for your application</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
-<section class="section-padding">
-    <div style="text-align: center; margin-bottom: 40px;"><h2 style="font-size: 30px; color: var(--navy);" id="s-title">Specialized Portfolio</h2></div>
-    <div class="grid">
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1551288049-bbbda536ad0a?w=800&auto=format&fit=crop" alt="Food"></div>
-            <div class="card-content"><h3>Food & Beverages</h3><ul><li><i class="fas fa-check"></i> Xanthan Gum / CMC / Citric Acid</li><li><i class="fas fa-check"></i> Potassium Sorbate / STPP Food</li><li><i class="fas fa-check"></i> Emulsifiers / SFDA Certified</li></ul></div>
+<!-- ── WHY US ── -->
+<section id="why-us" class="why-bg">
+    <div class="inner">
+        <div class="text-center">
+            <span class="section-tag" id="why-tag">Why Choose Matera</span>
+            <h2 class="section-title" id="why-title">The Matera Advantage</h2>
+            <p class="section-sub" id="why-sub">We combine technical expertise, reliable sourcing, and competitive pricing to keep your production running smoothly.</p>
         </div>
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=800&auto=format&fit=crop" alt="Water"></div>
-            <div class="card-content"><h3>Water Treatment</h3><ul><li><i class="fas fa-check"></i> PAC / HEDP / ATMP / SHMP</li><li><i class="fas fa-check"></i> Anionic PAM / CMIT/MIT</li><li><i class="fas fa-check"></i> Antiscalants & Biocides</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=800&auto=format&fit=crop" alt="Paints"></div>
-            <div class="card-content"><h3>Paints & Coatings</h3><ul><li><i class="fas fa-check"></i> TiO2 Rutile / HPMC / Biocides</li><li><i class="fas fa-check"></i> BYK Dispersants / Defoamers</li><li><i class="fas fa-check"></i> Wetting Agents</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=800&auto=format&fit=crop" alt="Construction"></div>
-            <div class="card-content"><h3>Ceramics & Construction</h3><ul><li><i class="fas fa-check"></i> PCE Superplasticizers</li><li><i class="fas fa-check"></i> CMC Ceramic / STPP Ceramic</li><li><i class="fas fa-check"></i> Lignosulfonates / Retarders</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e17?w=800&auto=format&fit=crop" alt="Plastics"></div>
-            <div class="card-content"><h3>Plastics & Rubber</h3><ul><li><i class="fas fa-check"></i> Irganox 1010 / UV Stabilizers</li><li><i class="fas fa-check"></i> Slip Agents / ATH / Flame Retardants</li><li><i class="fas fa-check"></i> Processing Aids</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1622062327044-1230c726c79d?w=800&auto=format&fit=crop" alt="Detergents"></div>
-            <div class="card-content"><h3>Detergents</h3><ul><li><i class="fas fa-check"></i> LABSA / SLES / SLS</li><li><i class="fas fa-check"></i> STPP Industrial / CMC Industrial</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?w=800&auto=format&fit=crop" alt="Cosmetics"></div>
-            <div class="card-content"><h3>Cosmetics & Personal Care</h3><ul><li><i class="fas fa-check"></i> Carbomer / Phenoxyethanol</li><li><i class="fas fa-check"></i> Emulsifying Wax / Cetyl Alcohol</li><li><i class="fas fa-check"></i> Dimethicone</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=800&auto=format&fit=crop" alt="Feed"></div>
-            <div class="card-content"><h3>Poultry & Animal Feed</h3><ul><li><i class="fas fa-check"></i> Calcium Propionate / Propionic Acid</li><li><i class="fas fa-check"></i> Formic Acid Blends / Mold Inhibitors</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1524290266577-994f82236530?w=800&auto=format&fit=crop" alt="Leather"></div>
-            <div class="card-content"><h3>Leather Industry</h3><ul><li><i class="fas fa-check"></i> Basic Chromium Sulfate</li><li><i class="fas fa-check"></i> Formic Acid / Synthetic Tannins</li><li><i class="fas fa-check"></i> Fatliquors</li></ul></div>
-        </div>
-        <div class="card">
-            <div class="card-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=800&auto=format&fit=crop" alt="Wires"></div>
-            <div class="card-content"><h3>Wires & Cables</h3><ul><li><i class="fas fa-check"></i> ATH Flame Retardant / DBDPE</li><li><i class="fas fa-check"></i> Antioxidants / Processing Aids</li></ul></div>
+        <div class="why-grid">
+            <div class="why-card fade-in">
+                <div class="why-icon"><i class="fas fa-globe-asia"></i></div>
+                <h3 id="w1t">Global Sourcing, Local Presence</h3>
+                <p id="w1d">Partnerships with certified manufacturers across China, Europe, and India — delivering internationally-compliant products with local expertise.</p>
+            </div>
+            <div class="why-card fade-in">
+                <div class="why-icon"><i class="fas fa-tag"></i></div>
+                <h3 id="w2t">Competitive Pricing</h3>
+                <p id="w2d">Direct factory relationships mean we bypass unnecessary intermediaries, offering you the best market rates without compromising on quality.</p>
+            </div>
+            <div class="why-card fade-in">
+                <div class="why-icon"><i class="fas fa-file-alt"></i></div>
+                <h3 id="w3t">Full Documentation</h3>
+                <p id="w3d">COA, MSDS, TDS, Halal certificates, and customs compliance documents provided with every shipment.</p>
+            </div>
+            <div class="why-card fade-in">
+                <div class="why-icon"><i class="fas fa-headset"></i></div>
+                <h3 id="w4t">Dedicated After-Sales Support</h3>
+                <p id="w4d">A dedicated account manager and technical team ready to resolve any issue post-delivery, ensuring continuity of your operations.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<section id="contact" class="contact-cta">
-    <h2 id="c-title">Connect with Our Sales Engineer</h2>
-    <a href="https://wa.me/9665XXXXXXXX" class="btn-whatsapp"><i class="fab fa-whatsapp"></i> INQUIRY VIA WHATSAPP</a>
+<!-- ── PRODUCTS ── -->
+<section id="products">
+    <div class="text-center">
+        <span class="section-tag" id="prod-tag">Our Portfolio</span>
+        <h2 class="section-title" id="prod-title">10+ Specialized Product Categories</h2>
+        <p class="section-sub" id="prod-sub">From commodity chemicals to specialty additives — we cover your full production needs.</p>
+    </div>
+    <div class="products-grid">
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1551288049-bbbda536ad0a?w=600&auto=format&fit=crop" alt="Food additives" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-utensils"></i> <span data-en="Food &amp; Beverages" data-ar="الغذاء والمشروبات">Food &amp; Beverages</span></h3><ul><li><i class="fas fa-circle"></i> Xanthan Gum / CMC / Citric Acid</li><li><i class="fas fa-circle"></i> Potassium Sorbate / STPP Food</li><li><i class="fas fa-circle"></i> Emulsifiers / SFDA Certified</li></ul></div>
+        </div>
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?w=600&auto=format&fit=crop" alt="Water treatment" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-tint"></i> <span data-en="Water Treatment" data-ar="معالجة المياه">Water Treatment</span></h3><ul><li><i class="fas fa-circle"></i> PAC / HEDP / ATMP / SHMP</li><li><i class="fas fa-circle"></i> Anionic PAM / CMIT/MIT</li><li><i class="fas fa-circle"></i> Antiscalants &amp; Biocides</li></ul></div>
+        </div>
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=600&auto=format&fit=crop" alt="Paints" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-paint-roller"></i> <span data-en="Paints &amp; Coatings" data-ar="الدهانات والطلاء">Paints &amp; Coatings</span></h3><ul><li><i class="fas fa-circle"></i> TiO2 Rutile / HPMC / Biocides</li><li><i class="fas fa-circle"></i> BYK Dispersants / Defoamers</li><li><i class="fas fa-circle"></i> Wetting Agents</li></ul></div>
+        </div>
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?w=600&auto=format&fit=crop" alt="Construction" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-hard-hat"></i> <span data-en="Ceramics &amp; Construction" data-ar="السيراميك والبناء">Ceramics &amp; Construction</span></h3><ul><li><i class="fas fa-circle"></i> PCE Superplasticizers</li><li><i class="fas fa-circle"></i> CMC Ceramic / STPP Ceramic</li><li><i class="fas fa-circle"></i> Lignosulfonates / Retarders</li></ul></div>
+        </div>
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1591857177580-dc82b9ac4e17?w=600&auto=format&fit=crop" alt="Plastics" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-cube"></i> <span data-en="Plastics &amp; Rubber" data-ar="البلاستيك والمطاط">Plastics &amp; Rubber</span></h3><ul><li><i class="fas fa-circle"></i> Irganox 1010 / UV Stabilizers</li><li><i class="fas fa-circle"></i> Slip Agents / ATH / Flame Retardants</li><li><i class="fas fa-circle"></i> Processing Aids</li></ul></div>
+        </div>
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1622062327044-1230c726c79d?w=600&auto=format&fit=crop" alt="Detergents" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-soap"></i> <span data-en="Detergents" data-ar="المنظفات">Detergents</span></h3><ul><li><i class="fas fa-circle"></i> LABSA / SLES / SLS</li><li><i class="fas fa-circle"></i> STPP Industrial / CMC Industrial</li><li><i class="fas fa-circle"></i> Surfactants &amp; Chelating Agents</li></ul></div>
+        </div>
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1596462502278-27bfdc4033c8?w=600&auto=format&fit=crop" alt="Cosmetics" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-spa"></i> <span data-en="Cosmetics &amp; Personal Care" data-ar="مستحضرات التجميل">Cosmetics &amp; Personal Care</span></h3><ul><li><i class="fas fa-circle"></i> Carbomer / Phenoxyethanol</li><li><i class="fas fa-circle"></i> Emulsifying Wax / Cetyl Alcohol</li><li><i class="fas fa-circle"></i> Dimethicone</li></ul></div>
+        </div>
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?w=600&auto=format&fit=crop" alt="Animal feed" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-seedling"></i> <span data-en="Poultry &amp; Animal Feed" data-ar="الدواجن والأعلاف">Poultry &amp; Animal Feed</span></h3><ul><li><i class="fas fa-circle"></i> Calcium Propionate / Propionic Acid</li><li><i class="fas fa-circle"></i> Formic Acid Blends / Mold Inhibitors</li><li><i class="fas fa-circle"></i> Organic Acids</li></ul></div>
+        </div>
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1524290266577-994f82236530?w=600&auto=format&fit=crop" alt="Leather" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-tshirt"></i> <span data-en="Leather Industry" data-ar="صناعة الجلود">Leather Industry</span></h3><ul><li><i class="fas fa-circle"></i> Basic Chromium Sulfate</li><li><i class="fas fa-circle"></i> Formic Acid / Synthetic Tannins</li><li><i class="fas fa-circle"></i> Fatliquors</li></ul></div>
+        </div>
+        <div class="product-card fade-in">
+            <div class="product-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc51?w=600&auto=format&fit=crop" alt="Wires" loading="lazy"></div>
+            <div class="product-body"><h3><i class="fas fa-plug"></i> <span data-en="Wires &amp; Cables" data-ar="الأسلاك والكابلات">Wires &amp; Cables</span></h3><ul><li><i class="fas fa-circle"></i> ATH Flame Retardant / DBDPE</li><li><i class="fas fa-circle"></i> Antioxidants / Processing Aids</li><li><i class="fas fa-circle"></i> Cable Stabilizers</li></ul></div>
+        </div>
+    </div>
 </section>
 
+<!-- ── QUOTE FORM ── -->
+<section id="contact" class="form-section">
+    <div class="text-center">
+        <span class="section-tag" style="color:#7ec8e3;" id="form-tag">Get in Touch</span>
+        <h2 class="section-title" style="color:white;" id="form-title">Request a Price Quote</h2>
+        <p class="section-sub" style="color:rgba(255,255,255,0.6);" id="form-sub">Fill in the form and our sales engineer will contact you via WhatsApp within 24 hours.</p>
+    </div>
+    <div class="form-wrap fade-in">
+        <form id="quoteForm" onsubmit="submitForm(event)" novalidate>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label id="fl1">Company / Factory Name</label>
+                    <input type="text" id="fi-company" placeholder="Al-Noor Manufacturing Co." required>
+                </div>
+                <div class="form-group">
+                    <label id="fl2">Contact Person</label>
+                    <input type="text" id="fi-name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <label id="fl3">WhatsApp / Phone</label>
+                    <input type="tel" id="fi-phone" placeholder="+966 5X XXX XXXX" required>
+                </div>
+                <div class="form-group">
+                    <label id="fl4">Product Category</label>
+                    <select id="fi-category" required>
+                        <option value="">-- Select Category --</option>
+                        <option>Food &amp; Beverages</option>
+                        <option>Water Treatment</option>
+                        <option>Paints &amp; Coatings</option>
+                        <option>Ceramics &amp; Construction</option>
+                        <option>Plastics &amp; Rubber</option>
+                        <option>Detergents</option>
+                        <option>Cosmetics &amp; Personal Care</option>
+                        <option>Poultry &amp; Animal Feed</option>
+                        <option>Leather Industry</option>
+                        <option>Wires &amp; Cables</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label id="fl5">Specific Product</label>
+                    <input type="text" id="fi-product" placeholder="e.g. Xanthan Gum 200 mesh">
+                </div>
+                <div class="form-group">
+                    <label id="fl6">Estimated Quantity</label>
+                    <input type="text" id="fi-qty" placeholder="e.g. 1 MT / month">
+                </div>
+                <div class="form-group full">
+                    <label id="fl7">Additional Notes</label>
+                    <textarea id="fi-notes" placeholder="Spec requirements, certifications needed, delivery location..."></textarea>
+                </div>
+                <div class="form-group full">
+                    <button type="submit" class="btn-submit">
+                        <i class="fab fa-whatsapp" style="font-size:20px;"></i>
+                        <span id="btn-submit-text">Send via WhatsApp</span>
+                    </button>
+                    <p class="form-note" id="form-note">Your information is sent directly to our sales team. We respond within 24 hours.</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- ── FOOTER ── -->
 <footer>
-    <div class="footer-logo"><img src="LOGO.jpg" alt="Matera"></div>
-    <p style="font-size: 12px; opacity: 0.5;">&copy; 2026 Matera Chemicals | Kingdom of Saudi Arabia</p>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <img src="LOGO.jpg" alt="Matera Chemicals">
+            <p id="foot-desc">Specialty chemical additives supplier serving 10+ industrial sectors across the Kingdom of Saudi Arabia.</p>
+        </div>
+        <div class="footer-col">
+            <h4 id="fc1">Quick Links</h4>
+            <ul>
+                <li><a href="#about" data-en="About Us" data-ar="عن الشركة">About Us</a></li>
+                <li><a href="#products" data-en="Products" data-ar="منتجاتنا">Products</a></li>
+                <li><a href="#why-us" data-en="Why Matera" data-ar="لماذا ماتيرا">Why Matera</a></li>
+                <li><a href="#contact" data-en="Request Quote" data-ar="طلب عرض سعر">Request Quote</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4 id="fc2">Sectors</h4>
+            <ul>
+                <li><a href="#products">Food &amp; Beverages</a></li>
+                <li><a href="#products">Water Treatment</a></li>
+                <li><a href="#products">Paints &amp; Coatings</a></li>
+                <li><a href="#products">Construction</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p id="foot-copy">&copy; 2026 Matera Chemicals | Kingdom of Saudi Arabia</p>
+        <p style="font-size:11px;color:rgba(255,255,255,0.18);">www.materachem.com</p>
+    </div>
 </footer>
 
 <script>
-    let currentLang = 'en';
-    function toggleLang() {
-        const body = document.getElementById('body');
-        const langBtn = document.getElementById('langBtn');
-        if(currentLang === 'en') {
-            body.classList.add('ar'); currentLang = 'ar'; langBtn.innerText = 'EN';
-            document.getElementById('h-title').innerHTML = 'توفير <span>إضافات أساسية</span><br>لأكثر من 10 قطاعات صناعية';
-            document.getElementById('m-title').innerText = 'رؤية حول السوق السعودي';
-            document.getElementById('s-title').innerText = 'محفظة حلولنا المتخصصة';
-            document.getElementById('c-title').innerText = 'تواصل مع مهندس المبيعات';
-        } else {
-            body.classList.remove('ar'); currentLang = 'en'; langBtn.innerText = 'AR';
-            document.getElementById('h-title').innerHTML = 'Providing <span>Essential Additives</span><br>for 10+ Industrial Sectors';
-            document.getElementById('m-title').innerText = 'Saudi Arabia Market Insight';
-            document.getElementById('s-title').innerText = 'Specialized Portfolio';
-            document.getElementById('c-title').innerText = 'Connect with Our Sales Engineer';
-        }
+/* ── TRANSLATIONS ── */
+const T = {
+    en: {
+        'hero-badge':    'KSA Specialty Chemicals',
+        'hero-title':    'Providing <span>Essential Additives</span><br>for 10+ Industrial Sectors',
+        'hero-sub':      'Your trusted partner for high-quality specialty chemical additives across the Kingdom of Saudi Arabia — from food &amp; beverages to construction, plastics, and cosmetics.',
+        'hero-btn1':     'Request a Quote',
+        'hero-btn2':     'Explore Products',
+        'stats-h':       'Saudi Arabia Chemical Market',
+        'stats-p':       'Serving the fastest-growing specialty chemicals market in the Middle East',
+        'st1': 'Food &amp; Bev (SAR)', 'st2': 'Water Treatment (SAR)', 'st3': 'Paints &amp; Coatings (SAR)',
+        'st4': 'Total Chemical Market', 'st5': 'Industrial Sectors Served',
+        'about-tag':   'About Matera Chemicals',
+        'about-title': 'Your Reliable Source for Specialty Chemicals in KSA',
+        'about-desc':  'Matera Chemicals is a specialized trading company based in the Kingdom of Saudi Arabia, focused on supplying high-quality chemical additives and raw materials to industrial manufacturers across multiple sectors.',
+        'af1t': 'SFDA &amp; Regulatory Compliant', 'af1d': 'Food-grade products comply with Saudi Food and Drug Authority standards',
+        'af2t': 'Fast Local Delivery',             'af2d': 'Stocked inventory enables rapid fulfillment to factories across the Kingdom',
+        'af3t': 'Technical Sales Support',         'af3d': 'Sales engineers available to recommend the right grade for your application',
+        'why-tag':  'Why Choose Matera',
+        'why-title':'The Matera Advantage',
+        'why-sub':  'We combine technical expertise, reliable sourcing, and competitive pricing to keep your production running smoothly.',
+        'w1t': 'Global Sourcing, Local Presence',   'w1d': 'Partnerships with certified manufacturers across China, Europe, and India — delivering internationally-compliant products with local expertise.',
+        'w2t': 'Competitive Pricing',               'w2d': 'Direct factory relationships mean we bypass unnecessary intermediaries, offering you the best market rates without compromising on quality.',
+        'w3t': 'Full Documentation',                'w3d': 'COA, MSDS, TDS, Halal certificates, and customs compliance documents provided with every shipment.',
+        'w4t': 'Dedicated After-Sales Support',     'w4d': 'A dedicated account manager and technical team ready to resolve any issue post-delivery, ensuring continuity of your operations.',
+        'prod-tag':  'Our Portfolio',
+        'prod-title':'10+ Specialized Product Categories',
+        'prod-sub':  'From commodity chemicals to specialty additives — we cover your full production needs.',
+        'form-tag':  'Get in Touch',
+        'form-title':'Request a Price Quote',
+        'form-sub':  'Fill in the form and our sales engineer will contact you via WhatsApp within 24 hours.',
+        'fl1': 'Company / Factory Name', 'fl2': 'Contact Person', 'fl3': 'WhatsApp / Phone',
+        'fl4': 'Product Category',       'fl5': 'Specific Product', 'fl6': 'Estimated Quantity', 'fl7': 'Additional Notes',
+        'btn-submit-text': 'Send via WhatsApp',
+        'form-note': 'Your information is sent directly to our sales team. We respond within 24 hours.',
+        'foot-desc': 'Specialty chemical additives supplier serving 10+ industrial sectors across the Kingdom of Saudi Arabia.',
+        'fc1': 'Quick Links', 'fc2': 'Sectors',
+        'foot-copy': '&copy; 2026 Matera Chemicals | Kingdom of Saudi Arabia',
+        'nav-cta': 'Request Quote',
+    },
+    ar: {
+        'hero-badge':    'مواد كيميائية متخصصة في المملكة',
+        'hero-title':    'توفير <span>إضافات أساسية</span><br>لأكثر من 10 قطاعات صناعية',
+        'hero-sub':      'شريكك الموثوق لتوريد المضافات الكيميائية المتخصصة عالية الجودة في المملكة العربية السعودية — من الغذاء والمشروبات إلى البناء والبلاستيك ومستحضرات التجميل.',
+        'hero-btn1':     'طلب عرض سعر',
+        'hero-btn2':     'استعرض المنتجات',
+        'stats-h':       'السوق الكيميائي في المملكة',
+        'stats-p':       'نخدم أسرع أسواق المواد الكيميائية المتخصصة نمواً في الشرق الأوسط',
+        'st1': 'الغذاء والمشروبات (ريال)', 'st2': 'معالجة المياه (ريال)', 'st3': 'الدهانات والطلاء (ريال)',
+        'st4': 'إجمالي السوق الكيميائي', 'st5': 'قطاع صناعي مخدوم',
+        'about-tag':   'عن ماتيرا كيمكالز',
+        'about-title': 'مصدرك الموثوق للمواد الكيميائية المتخصصة في المملكة',
+        'about-desc':  'ماتيرا كيمكالز شركة تجارية متخصصة مقرها المملكة العربية السعودية، تعمل على توريد المضافات الكيميائية عالية الجودة والمواد الخام للمصانع الصناعية في قطاعات متعددة.',
+        'af1t': 'متوافق مع هيئة الغذاء والدواء', 'af1d': 'منتجاتنا الغذائية مستوفية لاشتراطات هيئة الغذاء والدواء السعودية',
+        'af2t': 'توصيل محلي سريع',               'af2d': 'مخزون جاهز يتيح التسليم السريع للمصانع في جميع أنحاء المملكة',
+        'af3t': 'دعم فني متخصص',                 'af3d': 'مهندسو مبيعات متاحون للتوصية بالدرجة المناسبة لتطبيقك الصناعي',
+        'why-tag':  'لماذا تختار ماتيرا',
+        'why-title':'ميزة ماتيرا التنافسية',
+        'why-sub':  'نجمع بين الخبرة التقنية، والمصادر الموثوقة، والأسعار التنافسية لضمان استمرارية إنتاجك.',
+        'w1t': 'توريد عالمي بحضور محلي',    'w1d': 'شراكات مع مصنعين معتمدين في الصين وأوروبا والهند — بمنتجات متوافقة دولياً وخبرة محلية.',
+        'w2t': 'أسعار تنافسية',              'w2d': 'علاقاتنا المباشرة مع المصانع تتيح تجاوز الوسطاء وتقديم أفضل أسعار السوق دون المساومة على الجودة.',
+        'w3t': 'وثائق كاملة',                'w3d': 'نوفر شهادات COA وMSDS وTDS وشهادات حلال ووثائق الامتثال الجمركي مع كل شحنة.',
+        'w4t': 'دعم ما بعد البيع',           'w4d': 'مدير حساب مخصص وفريق تقني جاهز لحل أي مشكلة بعد التسليم لضمان استمرارية عملياتك.',
+        'prod-tag':  'محفظتنا',
+        'prod-title':'أكثر من 10 فئات منتجات متخصصة',
+        'prod-sub':  'من المواد الكيميائية الأساسية إلى المضافات المتخصصة — نغطي جميع احتياجاتك الإنتاجية.',
+        'form-tag':  'تواصل معنا',
+        'form-title':'طلب عرض أسعار',
+        'form-sub':  'أكمل النموذج وسيتواصل معك مهندس المبيعات عبر واتساب خلال 24 ساعة.',
+        'fl1': 'اسم الشركة / المصنع', 'fl2': 'اسم المسؤول', 'fl3': 'واتساب / الجوال',
+        'fl4': 'فئة المنتج',           'fl5': 'المنتج المحدد', 'fl6': 'الكمية التقريبية', 'fl7': 'ملاحظات إضافية',
+        'btn-submit-text': 'إرسال عبر واتساب',
+        'form-note': 'يُرسل طلبك مباشرة لفريق المبيعات عبر واتساب. نرد خلال 24 ساعة.',
+        'foot-desc': 'موردو مضافات كيميائية متخصصة يخدمون أكثر من 10 قطاعات صناعية في المملكة.',
+        'fc1': 'روابط سريعة', 'fc2': 'القطاعات',
+        'foot-copy': '&copy; 2026 ماتيرا كيمكالز | المملكة العربية السعودية',
+        'nav-cta': 'طلب عرض سعر',
     }
+};
+
+const CAT_OPTIONS = {
+    en: ['-- Select Category --','Food & Beverages','Water Treatment','Paints & Coatings','Ceramics & Construction','Plastics & Rubber','Detergents','Cosmetics & Personal Care','Poultry & Animal Feed','Leather Industry','Wires & Cables','Other'],
+    ar: ['-- اختر الفئة --','الغذاء والمشروبات','معالجة المياه','الدهانات والطلاء','السيراميك والبناء','البلاستيك والمطاط','المنظفات','مستحضرات التجميل','الدواجن والأعلاف','صناعة الجلود','الأسلاك والكابلات','أخرى']
+};
+
+let lang = 'en';
+
+function toggleLang() {
+    lang = lang === 'en' ? 'ar' : 'en';
+    const html = document.getElementById('html-root');
+    const body = document.getElementById('body');
+
+    if (lang === 'ar') {
+        body.classList.add('ar');
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        document.getElementById('langBtn').textContent = 'EN';
+    } else {
+        body.classList.remove('ar');
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        document.getElementById('langBtn').textContent = 'AR';
+    }
+
+    const t = T[lang];
+    for (const [id, val] of Object.entries(t)) {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = val;
+    }
+
+    document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.dataset[lang] || el.dataset.en;
+    });
+
+    const sel = document.getElementById('fi-category');
+    sel.innerHTML = CAT_OPTIONS[lang].map((o, i) =>
+        `<option value="${i === 0 ? '' : o}">${o}</option>`
+    ).join('');
+}
+
+/* ── NAV ── */
+window.addEventListener('scroll', () => {
+    document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+});
+
+function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+}
+function closeMenu() {
+    document.getElementById('mobile-menu').classList.remove('open');
+}
+
+/* ── FADE IN ── */
+const fadeObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+
+/* ── COUNTERS ── */
+const countObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (!e.isIntersecting || e.target.dataset.counted) return;
+        e.target.dataset.counted = '1';
+        const target = parseFloat(e.target.dataset.target);
+        const suffix = e.target.dataset.suffix || '';
+        const isFloat = !Number.isInteger(target);
+        const dur = 1600, step = 16, steps = dur / step;
+        let cur = 0, inc = target / steps;
+        const t = setInterval(() => {
+            cur = Math.min(cur + inc, target);
+            e.target.textContent = (isFloat ? cur.toFixed(1) : Math.floor(cur)) + suffix;
+            if (cur >= target) clearInterval(t);
+        }, step);
+    });
+}, { threshold: 0.6 });
+document.querySelectorAll('[data-target]').forEach(el => countObs.observe(el));
+
+/* ── FORM → WHATSAPP ── */
+const WA = '9665XXXXXXXX'; // Replace with real number
+
+function submitForm(e) {
+    e.preventDefault();
+    const get = id => document.getElementById(id).value.trim();
+    const company  = get('fi-company');
+    const name     = get('fi-name');
+    const phone    = get('fi-phone');
+    const category = get('fi-category');
+    const product  = get('fi-product') || (lang === 'ar' ? 'غير محدد' : 'Not specified');
+    const qty      = get('fi-qty')     || (lang === 'ar' ? 'غير محدد' : 'Not specified');
+    const notes    = get('fi-notes')   || (lang === 'ar' ? 'لا يوجد'   : 'None');
+
+    if (!company || !name || !phone || !category) {
+        alert(lang === 'ar' ? 'يرجى تعبئة جميع الحقول المطلوبة' : 'Please fill in all required fields.');
+        return;
+    }
+
+    const msg = lang === 'ar'
+        ? `🧪 *طلب عرض أسعار — ماتيرا كيمكالز*\n\n🏭 الشركة: ${company}\n👤 المسؤول: ${name}\n📱 الجوال: ${phone}\n📦 الفئة: ${category}\n🔬 المنتج: ${product}\n⚖️ الكمية: ${qty}\n📝 ملاحظات: ${notes}`
+        : `🧪 *Quote Request — Matera Chemicals*\n\n🏭 Company: ${company}\n👤 Contact: ${name}\n📱 Phone: ${phone}\n📦 Category: ${category}\n🔬 Product: ${product}\n⚖️ Quantity: ${qty}\n📝 Notes: ${notes}`;
+
+    window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`, '_blank');
+}
 </script>
 </body>
 </html>
